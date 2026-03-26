@@ -1,0 +1,7 @@
+body {
+    background-image: url('Imagens/abstract-marble-black-gold-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000; /* Fundo preto caso a imagem demore a carregar */
+    image-rendering: auto; 
+}
