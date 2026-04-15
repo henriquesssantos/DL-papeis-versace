@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DL alto padrão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo_photoroom.png" alt="DL Alto Padrão">
+        </div>
+
+        <div class="wpp">
+            <ul class="nav-links">
+                <li><a href="https://wa.me/5548998632088?text=Olá!%20Gostaria%20de%20falar%20sobre%20os%20papéis%20e%20persianas." target="_blank">
+                    <img src="images/icone_wpp.png" alt="WhatsApp"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="images/Imagem_1.jpg" alt="Ambiente decorado 1">
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="images/Imagem_2.jpg" alt="Ambiente decorado 2">
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="images/Imagem_3.jpg" alt="Ambiente decorado 3">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600&auto=format&fit=crop" alt="Exemplo de Papel de Parede">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop" alt="Exemplo de Persiana">
+                </div>
+            </div>
+        </div>
+        
+    </section>
+        
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true, 
+        grabCursor: true, 
+        
+        // SCROLL CONTÍNUO E SUAVE
+        freeMode: {
+          enabled: true, 
+          sticky: false, 
+        },
+        autoplay: {
+          delay: 1, 
+          disableOnInteraction: false, 
+          pauseOnMouseEnter: true, 
+        },
+        speed: 8000, // Ajuste a velocidade aqui (8000 = 8 segundos de transição)
+
+        // RESPONSIVIDADE
+        breakpoints: {
+            320: { // Celular
+                slidesPerView: 1, 
+                spaceBetween: 15,
+            },
+            640: { // Tablet
+                slidesPerView: 2, 
+                spaceBetween: 20,
+            },
+            1024: { // Desktop
+                slidesPerView: 3, 
+                spaceBetween: 30,
+            }
+        },
+
+        // NAVEGAÇÃO
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+</body>
+</html>
