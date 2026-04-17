@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DL alto padrão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo_photoroom.png" alt="DL Alto Padrão">
+        </div>
+
+        <div class="icons">
+            <ul class="nav-links">
+                <li>
+                    <a href="https://www.instagram.com/dlpapeisepersianas/" target="_blank" class="btn-insta">
+                        <img src="images/instagram (1).png" alt="Instagram">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://wa.me/5548998632088?text=Olá!%20Gostaria%20de%20falar%20sobre%20os%20papéis%20e%20persianas." target="_blank">
+                        <img src="images/icone_wpp.png" alt="WhatsApp">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="swiper mySwiper">
+
+
+        <!-- carrossel -->
+
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="images/Imagem_1.jpg" alt="Ambiente decorado 1">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="images/Imagem_2.jpg" alt="Ambiente decorado 2">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="images/Imagem_3.jpg" alt="Ambiente decorado 3">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600&auto=format&fit=crop" alt="Exemplo de Papel de Parede">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop" alt="Exemplo de Persiana">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            grabCursor: true,
+
+            // SCROLL CONTÍNUO E SUAVE
+            freeMode: {
+                enabled: true,
+                sticky: false,
+            },
+            autoplay: {
+                delay: 1,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            speed: 8000, // Ajuste a velocidade aqui (8000 = 8 segundos de transição)
+
+            // RESPONSIVIDADE
+            breakpoints: {
+                320: { // Celular
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                640: { // Tablet
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: { // Desktop
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
+            },
+
+            // NAVEGAÇÃO
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+
+    <!-- FIM DO CARROSSEL -->
+
+
+    <section class="servicos">
+        <div class="servicos-header">
+            <h2>TRANSFORME SEU AMBIENTE COM SOFISTICAÇÃO E ELEGÂNCIA.</h2>
+            <p>Atendimento personalizado e instalação técnica especializada para cada detalhe do seu projeto.</p>
+        </div>
+
+        <div class="servicos-container">
+            <div class="servico-card">
+                <div class="card-image">
+                    <img src="images/imagem_4.jpg" alt="Papéis de Parede">
+                </div>
+                <div class="card-content">
+                    <h3>PAPÉIS DE PAREDE</h3>
+                    <p>Coleções exclusivas com texturas e padrões nacionais e importados.</p>
+                    <a href="https://wa.me/5548998632088?text=Olá!%20Gostaria%20de%20falar%20sobre%20os%20papéis%20e%20persianas" target="_blank" class="btn-whatsapp-card">
+                    Contate no WhatsApp <i class="fab fa-whatsapp"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="servico-card">
+                <div class="card-image">
+                    <img src="images/imagem_5.jpg" alt="Persianas">
+                </div>
+                <div class="card-content">
+                    <h3>PERSIANAS</h3>
+                    <p>Modelos motorizados e manuais: Rolô, Romana, Double Vision e mais.</p>
+                    <a href="https://wa.me/5548998632088?text=Olá!%20Gostaria%20de%20falar%20sobre%20os%20papéis%20e%20persianas" target="_blank" class="btn-whatsapp-card">
+                    Contate no WhatsApp <i class="fab fa-whatsapp"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="servico-card">
+                <div class="card-image">
+                    <img src="images/imagem_6.jpg" alt="Cortinas">
+                </div>
+                <div class="card-content">
+                    <h3>CORTINAS</h3>
+                    <p>Confecção sob medida com tecidos nobres e acabamento impecável.</p>
+                    <a href="https://wa.me/5548998632088?text=Olá!%20Gostaria%20de%20falar%20sobre%20as%20cortinas" target="_blank" class="btn-whatsapp-card">
+                    Contate no WhatsApp <i class="fab fa-whatsapp "></i>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="diferenciais">
+        <div class="container">
+            <h2 class="titulo-serif">POR QUE ESCOLHER DL PAPÉIS E PERSIANAS</h2>
+
+            <div class="diferenciais-grid">
+                <div class="diferencial-item">
+                    <i class="fas fa-tools"></i>
+                    <div class="diferencial-txt">
+                        <h3>INSTALAÇÃO PROFISSIONAL</h3>
+                        <p>Equipe técnica qualificada para garantir o acabamento perfeito em cada projeto.</p>
+                    </div>
+                </div>
+
+                <div class="diferencial-item">
+                    <i class="fas fa-gem"></i>
+                    <div class="diferencial-txt">
+                        <h3>MATERIAIS DE ALTA QUALIDADE</h3>
+                        <p>Trabalhamos apenas com as melhores marcas nacionais e importadas do mercado.</p>
+                    </div>
+                </div>
+
+                <div class="diferencial-item">
+                    <i class="fas fa-headset"></i>
+                    <div class="diferencial-txt">
+                        <h3>ATENDIMENTO PERSONALIZADO</h3>
+                        <p>Consultoria técnica completa para ajudar você a escolher a melhor solução.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-final">
+        <div class="footer-content">
+            <img src="images/logo_photoroom.png" alt="DL Alto Padrão" class="footer-logo">
+            <p>&copy; 2024 DL Papéis & Persianas - Todos os direitos reservados.</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/dlpapeisepersianas/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5548998632088" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

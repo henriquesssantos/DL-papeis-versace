@@ -1,0 +1,444 @@
+Valeu demais,
+bro! Fico muito feliz que tenha curtido o resultado. É muito gratificante quando a gente ajusta os detalhes e o projeto toma aquela forma de "Alto Padrão" que a gente imaginou! Aqui está o seu código style.css final e completo,
+juntando tudo de melhor que fizemos: o fundo da Versace com o escurecimento elegante,
+a barra e rodapé com larguras independentes,
+e a responsividade perfeita com a logo na lateral para os celulares. É só apagar tudo do seu style.css atual e colar esse gigante aqui: CSS
+/* =========================================
+   1. RESET BÁSICO
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   2. FUNDO VERSACE GLOBAL (ALTO PADRÃO)
+========================================= */
+
+body {
+    background-image: url('images/versace.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Efeito parallax na página inteira */
+    background-color: #000;
+    /* Cor de segurança */
+    margin: 0;
+}
+
+
+/* Camada de escurecimento para não atrapalhar a leitura */
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    /* Escurece 75% da imagem */
+    z-index: -1;
+    /* Garante que fique atrás de tudo */
+}
+
+
+/* =========================================
+   3. NAVBAR (CABEÇALHO) - DESKTOP
+========================================= */
+
+.navbar {
+    background-color: #000 !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 50px;
+    /* Altura do cabeçalho no PC */
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Centraliza a Logo no PC */
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+    /* Tamanho da logo no PC */
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: lighten;
+}
+
+
+/* Ícones Redes Sociais */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: lighten;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover img {
+    transform: scale(1.1);
+}
+
+
+/* =========================================
+   4. CARROSSEL (SWIPER)
+========================================= */
+
+.swiper {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    background-color: transparent !important;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.card {
+    border-radius: 15px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.10);
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+    background-color: transparent;
+    border: 2px solid white;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    transform: scale(0.7);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================================
+   5. SERVIÇOS LUXO (CARDS)
+========================================= */
+
+.servicos {
+    padding: 80px 20px;
+    background-color: transparent !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicos-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.servicos-header h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.servicos-header p {
+    color: #ddd;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.servico-card {
+    background-color: #f4f1ea;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.servico-card:hover {
+    transform: translateY(-15px);
+}
+
+.card-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-family: "Arial", sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-whatsapp-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #48b471;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-whatsapp-card:hover {
+    background-color: #368a56;
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   6. DIFERENCIAIS
+========================================= */
+
+.diferenciais {
+    padding: 80px 20px;
+    background-color: transparent !important;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.titulo-serif {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.diferenciais-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.diferencial-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+}
+
+.diferencial-item i {
+    font-size: 2.5rem;
+    color: #d4af37;
+    min-width: 60px;
+    text-align: center;
+}
+
+.diferencial-txt h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.diferencial-txt p {
+    color: #ddd;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   7. RODAPÉ (FOOTER) - DESKTOP
+========================================= */
+
+.footer-final {
+    background-color: #000 !important;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-logo {
+    height: 45px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-social {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #25d366;
+}
+
+
+/* =========================================
+   8. TESTE DE RESPONSIVIDADE (NAV OVERLAY)
+========================================= */
+
+@media (max-width: 768px) {
+    /* Navbar Transparente sobreposta ao fundo Versace */
+    .navbar {
+        background-color: transparent !important;
+        /* Remove o fundo preto */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1px;
+        /* Um pouco mais de respiro já que está sobre a imagem */
+        position: relative;
+        z-index: 10;
+    }
+    .logo {
+        position: static;
+        transform: none;
+    }
+    .logo img {
+        height: 140px;
+        width: auto;
+        transform: scale(1);
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a img {
+        height: 24px;
+    }
+    /* MANTÉM O FOOTER PRETO (conforme solicitado) */
+    .footer-final {
+        background-color: #000 !important;
+        padding: 1px 20px;
+    }
+    .footer-logo {
+        height: 125px;
+        margin-bottom: 5px;
+    }
+    /* Ajustes de espaçamento para compensar a falta da tarja preta */
+    .swiper {
+        padding: 10px 0 30px 0;
+        /* Aproxima um pouco o carrossel do topo */
+    }
+    .card {
+        height: 220px;
+        border-radius: 10px;
+    }
+    .servicos-header h2 {
+        font-size: 1.5rem;
+    }
+    .servicos-header p {
+        font-size: 0.9rem;
+    }
+    .titulo-serif {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Ajustes para Celulares bem pequenos (até 600px) */
+
+@media (max-width: 600px) {
+    .diferencial-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .diferencial-item i {
+        font-size: 2rem;
+    }
+    .diferencial-txt h3 {
+        font-size: 1.1rem;
+    }
+}
