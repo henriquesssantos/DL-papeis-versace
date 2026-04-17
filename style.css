@@ -30,7 +30,7 @@ body::after {
     bottom: -50px;
     left: -50px;
     right: -50px;
-    background-image: url('images/background-versace.jpg');
+    background-image: url('images/versace.png');
     background-size: cover;
     background-position: center;
     z-index: -2; 
