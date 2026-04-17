@@ -339,29 +339,100 @@ body {
 
 
 /* =========================================
-   7. RESPONSIVIDADE (CELULARES)
+   7. RESPONSIVIDADE (CELULARES E TABLETS)
 ========================================= */
 
 @media (max-width: 768px) {
+    /* ==========================================
+       1. CONTROLE DA NAVBAR (CABEÇALHO NO MOBILE)
+       ========================================== */
     .navbar {
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px;
-        gap: 20px;
+        flex-direction: row;
+        /* Coloca a logo e os ícones lado a lado */
+        justify-content: space-between;
+        /* Joga a logo para a esquerda e ícones para a direita */
+        align-items: center;
+        padding: 1px 20px;
+        /* Mantém o fundo preto fininho */
     }
     .logo {
         position: static;
+        /* Tira a logo do meio da tela para não encavalar nas redes sociais */
         transform: none;
+    }
+    /* Tamanho INDIVIDUAL da Logo no Cabeçalho Mobile */
+    .logo img {
+        height: 120px;
+        /* Altura ajustada para caber bem na lateral */
+        width: auto;
+        transform: scale(1);
+    }
+    /* Tamanho e espaço dos ícones (Insta e Whats) */
+    .nav-links {
+        gap: 15px;
+        /* Espaço entre o Insta e o Whats */
+    }
+    .nav-links a img {
+        height: 19px;
+        /* Tamanho dos ícones para acompanhar a logo lateral */
+    }
+    /* ==========================================
+       2. CONTROLE DO FOOTER (RODAPÉ)
+       ========================================== */
+    .footer-final {
+        /* O PRIMEIRO NÚMERO (10px) controla a grossura do fundo preto do rodapé */
+        padding: 10px 20px;
+    }
+    /* Tamanho INDIVIDUAL da Logo no Rodapé */
+    .footer-logo {
+        height: 95px;
+        /* Aumente ou diminua para mudar APENAS a logo do rodapé */
+        width: auto;
+        margin-bottom: 5px;
+    }
+    /* ==========================================
+       3. RESTANTE DO SITE (CARROSSEL, TEXTOS)
+       ========================================== */
+    .swiper {
+        padding: 20px 0;
+    }
+    .card {
+        height: 220px;
+        border-radius: 10px;
+    }
+    .servicos-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    .servicos-header p {
+        font-size: 0.9rem;
+    }
+    .servicos-container {
+        gap: 20px;
     }
     .servico-card {
         width: 100%;
-        max-width: 400px;
+        max-width: 320px;
+    }
+    .titulo-serif {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
     }
 }
+
+
+/* Ajustes para Celulares menores (até 600px) */
 
 @media (max-width: 600px) {
     .diferencial-item {
         flex-direction: column;
         text-align: center;
+        gap: 15px;
+    }
+    .diferencial-item i {
+        font-size: 2rem;
+    }
+    .diferencial-txt h3 {
+        font-size: 1.1rem;
     }
 }
