@@ -1,6 +1,7 @@
 /* =========================================
    1. RESET BÁSICO
 ========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,8 @@
 }
 
 html {
-    background-color: #000; /* Cor absoluta do fundo da página */
+    background-color: #000;
+    /* Cor absoluta do fundo da página */
 }
 
 body {
@@ -17,11 +19,14 @@ body {
     /* Removemos o background-image daqui para acabar com o bug do Safari */
 }
 
+
 /* =========================================
    2. FUNDO VERSACE GLOBAL (CORREÇÃO DEFINITIVA IOS/ANDROID)
 ========================================= */
 
+
 /* Camada da Imagem (Perfeita e sem zoom estourado) */
+
 body::after {
     content: "";
     position: fixed;
@@ -33,10 +38,12 @@ body::after {
     background-image: url('images/versace.png');
     background-size: cover;
     background-position: center;
-    z-index: -2; 
+    z-index: -2;
 }
 
+
 /* Camada do Escurecimento (Protege 100% da leitura) */
+
 body::before {
     content: "";
     position: fixed;
@@ -48,16 +55,19 @@ body::before {
     background: rgba(0, 0, 0, 0.75);
     z-index: -1;
 }
+
+
 /* =========================================
    3. NAVBAR (CABEÇALHO) - DESKTOP
 ========================================= */
 
 .navbar {
-    background-color: #000 !important;
+    background-color: transparent !important;
+    /* Remove o fundo preto e deixa a textura Versace visível */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px 50px;
+    padding: 70px 50px;
     /* Altura do cabeçalho no PC */
     position: relative;
     z-index: 10;
@@ -76,7 +86,7 @@ body::before {
 }
 
 .logo img {
-    height: 120px;
+    height: 370px;
     /* Tamanho da logo no PC */
     width: auto;
     object-fit: contain;
@@ -335,14 +345,14 @@ body::before {
 .footer-final {
     background-color: #000 !important;
     color: white;
-    padding: 15px 20px;
+    padding: 5px 20px;
     text-align: center;
     position: relative;
     z-index: 10;
 }
 
 .footer-logo {
-    height: 45px;
+    height: 155px;
     margin-bottom: 10px;
     filter: brightness(0) invert(1);
 }
@@ -369,91 +379,80 @@ body::before {
 /* =========================================
    8. RESPONSIVIDADE (CELULARES E TABLETS)
 ========================================= */
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
     /* Navbar Transparente sobreposta */
     .navbar {
-        background-color: transparent !important; 
-        flex-direction: row; 
-        justify-content: space-between; 
+        background-color: transparent !important;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        padding: 20px; 
+        padding: 20px;
         position: relative;
         z-index: 10;
     }
-    
     .logo {
-        position: static; 
+        position: static;
         transform: none;
     }
-    
     .logo img {
-        height: 50px; 
+        height: 50px;
         width: auto;
         transform: scale(1);
     }
-
     .nav-links {
-        gap: 15px; 
+        gap: 15px;
     }
     .nav-links a img {
-        height: 25px; 
+        height: 25px;
     }
-
     /* MANTÉM O FOOTER PRETO */
     .footer-final {
         background-color: #000 !important;
-        padding: 15px 20px; 
+        padding: 15px 20px;
     }
     .footer-logo {
-        height: 35px; 
+        height: 35px;
         margin-bottom: 5px;
     }
-
     /* Ajustes do Site */
     .swiper {
-        padding: 10px 0 30px 0; 
+        padding: 10px 0 30px 0;
     }
-    
     .card {
         height: 220px;
         border-radius: 10px;
     }
-
     .servicos-header h2 {
         font-size: 1.5rem;
     }
-    
     .servicos-header p {
         font-size: 0.9rem;
     }
-
     .servicos-container {
         gap: 20px;
     }
-    
     .servico-card {
         width: 100%;
         max-width: 320px;
     }
-    
     .titulo-serif {
         font-size: 1.6rem;
     }
 }
 
+
 /* Ajustes para Celulares bem pequenos (até 600px) */
+
 @media (max-width: 600px) {
     .diferencial-item {
         flex-direction: column;
         text-align: center;
         gap: 15px;
     }
-    
     .diferencial-item i {
         font-size: 2rem;
     }
-    
     .diferencial-txt h3 {
         font-size: 1.1rem;
     }
