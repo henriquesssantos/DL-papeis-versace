@@ -387,7 +387,7 @@ body::before {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: 5px;
         position: relative;
         z-index: 10;
     }
@@ -396,7 +396,7 @@ body::before {
         transform: none;
     }
     .logo img {
-        height: 50px;
+        height: 180px;
         width: auto;
         transform: scale(1);
     }
@@ -409,10 +409,10 @@ body::before {
     /* MANTÉM O FOOTER PRETO */
     .footer-final {
         background-color: #000 !important;
-        padding: 15px 20px;
+        padding: 1px 20px;
     }
     .footer-logo {
-        height: 35px;
+        height: 155px;
         margin-bottom: 5px;
     }
     /* Ajustes do Site */
