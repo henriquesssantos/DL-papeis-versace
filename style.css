@@ -397,6 +397,7 @@ body::before {
     }
     .logo img {
         height: 50px;
+        height: 180px;
         width: auto;
         transform: scale(1);
     }
@@ -413,6 +414,10 @@ body::before {
     }
     .footer-logo {
         height: 35px;
+        padding: 1px 20px;
+    }
+    .footer-logo {
+        height: 155px;
         margin-bottom: 5px;
     }
     /* Ajustes do Site */
