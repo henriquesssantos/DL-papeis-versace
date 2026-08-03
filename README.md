@@ -44,7 +44,7 @@ Por se tratar de um projeto **Front-end estático**, ele não requer a instalaç
 
 ### 1. Visualização via GitHub Pages (Recomendado)
 Acesse a demonstração online e interativa diretamente no navegador:
-👉 **[Clique aqui para ver o site rodando](https://henriquesssantos.github.io/DL-papeis-versace)** *(Nota: Ative o GitHub Pages na branch do repositório)*
+👉 **[Clique aqui para ver o site rodando](https://henriquesssantos.github.io/DL-papeis-versace)**
 
 ### 2. Execução Local
 1. Clone este repositório para a sua máquina:
